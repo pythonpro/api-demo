@@ -1,0 +1,12 @@
+/.coverage
+/.git/
+/.gitignore
+/.pre-commit-config.yaml
+/.pytest_cache/
+/.ruff_cache/
+/.venv/
+/Dockerfile
+/README.md
+/htmlcov/
+__pycache__/
+/.dockerignore

@@ -1,0 +1,25 @@
+repos:
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.9
+    hooks:
+      # Run the linter.
+      - id: ruff
+        files: ^backend/
+        name: ruff check
+      # Run the formatter.
+      - id: ruff-format
+        files: ^backend/
+        name: ruff format
+-   repo: https://github.com/pycqa/isort
+    rev: 6.0.1
+    hooks:
+      - id: isort
+        name: isort
+- repo: local
+  hooks:
+    - id: pytest
+      name: tests
+      entry: bash -c 'DJANGO_SETTINGS_MODULE=config.settings pytest backend'
+      language: system
+      pass_filenames: false
+
