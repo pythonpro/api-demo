@@ -9,7 +9,7 @@ This project is a Django REST Framework-based API server that provides paginated
 - **Pagination, Sorting, and Filtering**: Implemented for both Wallet and Transaction models.
 - **Strict Balance Constraint**: Ensures a wallet’s balance never goes negative.
 - **Database Indexing**: Optimized queries with indexes where necessary.
-- **Test Coverage**: Comprehensive tests (just for the `wallets` app, which is sufficient for demo purposes).
+- **Test Coverage**: Comprehensive tests (just for the `wallets` app, which is sufficient for demo purposes). ![Coverage](https://codecov.io/gh/pythonpro/api-demo/branch/main/graph/badge.svg)
 - **Linting**: `ruff check` (run with `pre-commit` git hook).
 - **Formatting**: `ruff format` and `isort` (run with `pre-commit` git hook).
 - **Testing**: `pytest` tests (run with `pre-commit` git hook).
@@ -35,5 +35,3 @@ docker compose up
 ```sh
 docker compose run -it web bash -c 'DJANGO_SETTINGS_MODULE="config.settings" ./.venv/bin/pytest -s -v backend'
 ```
-
-
